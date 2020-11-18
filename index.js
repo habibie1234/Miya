@@ -13,12 +13,12 @@ const tambahan = require("./lib/tambahan.js")
 const donasi = require("./lib/donasi.js");
 const info = require("./lib/info.js");
 /////////////////
-const BotName = 'RUKA BOT'; 
+const BotName = 'Miya'; 
 const instagram = 'https://instagram.com/sndrzqy_'; 
 const telegram = 'Ikiiii2906'; 
 const kapanbotaktif = 'KETIKA HANYA DIAKTIFKAN'; 
 const youtube = 'Unknown People';
-//const grupch1 = 'https://chat.whatsapp.com/JKhKJDkEDpg4srefqACH1y'; 
+//const grupch1 = 'belum ada grup' ; 
 //const grupch2 = 'belum ada grup' ; 
 const
 {
@@ -241,7 +241,7 @@ conn.sendMessage(id, titoe, MessageType.text);
 }
 if (text.includes(";wiki")){
 const teks = text.replace(/;wiki /, "")
-axios.get(`https://st4rz.herokuapp.com/api/wiki?q=${text}`).then((res) => {
+axios.get(`https://st4rz.herokuapp.com/api/wiki?q=${teks}`).then((res) => {
     let hasil = `Menurut Wikipedia:\n\n${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
